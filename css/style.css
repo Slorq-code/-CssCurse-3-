@@ -1,0 +1,258 @@
+:root {
+    --azul: #0071b7;
+    --blanco: #fff;
+    --naranja: #ff4f1e;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--azul);
+    font-family: "Lato", sans-serif;
+    font-size: 1.6rem;
+}
+
+.caja-curso {
+    background-color: var(--naranja);
+    text-align: center;
+    color: var(--blanco);
+    padding: 5rem;
+}
+
+.caja-curso h1 {
+    margin: 0;
+}
+
+.caja-curso p {
+    font-size: 2.4rem;
+}
+
+.caja-curso a {
+    font-size: 2.4rem;
+    padding: 2rem;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 0;
+}
+
+h1,
+h2 {
+    color: var(--blanco);
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.box {
+    background-color: var(--naranja);
+    color: var(--blanco);
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.grid-1 {
+    display: grid;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+}
+
+.grid-2 .box:nth-child(1) {
+    grid-column: 1 / 3;
+}
+
+.grid-2 .box:nth-child(2) {
+    grid-column: 1 / 4;
+}
+
+.grid-2 .box:nth-child(6) {
+    grid-column: 1 / 3;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+}
+
+.grid-3 .box:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.grid-3 .box:nth-child(2) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+
+.grid-3 .box:nth-child(3) {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+}
+
+.grid-3 .box:nth-child(4) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+}
+
+.grid-3 .box:nth-child(5) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 2.5;
+}
+
+.grid-3 .box:nth-child(6) {
+    display: none;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-rows: repeat(2, 300px);
+    grid-template-columns: repeat(3, 300px);
+}
+
+.grid-4 .box:nth-child(2) {
+    background-color: black;
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.grid-5 {
+    display: grid;
+    grid: repeat(2, 300px) / repeat(3, 300px);
+}
+
+.grid-5 .box:nth-child(2) {
+    background-color: rgb(224, 5, 5);
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.grid-6 {
+    display: grid;
+    grid: repeat(2, 300px) / repeat(3, 300px);
+    grid-auto-flow: dense;
+}
+
+.grid-6 .box:nth-child(2) {
+    grid-column: 1 / 2;
+}
+
+.grid-7 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-8 {
+    display: grid;
+    grid: repeat(2, 20rem) / repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.grid-8 .box {
+    margin: 0;
+}
+
+.grid-9 {
+    display: grid;
+    height: 120rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "Header Header Header"
+        "Nav Nav Nav"
+        "Contenido Contenido Sidebar"
+        "Footer Footer Footer";
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 20rem 10rem 70rem 20rem;
+    gap: 1rem;
+}
+
+.grid-9 .box {
+    margin: 0;
+}
+
+.grid-9 .box:nth-child(1) {
+    grid-area: Header;
+}
+
+.grid-9 .box:nth-child(2) {
+    grid-area: Nav;
+}
+
+.grid-9 .box:nth-child(3) {
+    grid-area: Contenido;
+}
+
+.grid-9 .box:nth-child(4) {
+    grid-area: Sidebar;
+}
+
+.grid-9 .box:nth-child(5) {
+    grid-area: Footer;
+    margin-bottom: 60rem;
+}
+
+.grid-10 {
+    display: grid;
+    height: 120rem;
+    grid-template:
+        "Header Header Header" 20rem
+        "Nav Nav Nav" 10rem
+        "Contenido Contenido Sidebar" 70rem
+        "Footer Footer Footer" 20rem
+        / 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.grid-10 .box {
+    margin: 0;
+}
+
+.grid-10 .box:nth-child(1) {
+    grid-area: Header;
+}
+
+.grid-10 .box:nth-child(2) {
+    grid-area: Nav;
+}
+
+.grid-10 .box:nth-child(3) {
+    grid-area: Contenido;
+}
+
+.grid-10.box:nth-child(4) {
+    grid-area: Sidebar;
+}
+
+.grid-10 .box:nth-child(5) {
+    grid-area: Footer;
+    margin-bottom: 60rem;
+}
+
+.grid-11 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2px;
+    height: 300px;
+    place-content: center;
+}
+
+.grid-12 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-columns: repeat(auto-fit, 200px);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2px;
+}
